@@ -20,15 +20,15 @@ for (i = 0; i < buttons.length; i++) {
                     num1 += (current[i])
                     console.log(num1)
                 }
-                for (j = operand1 + 1; j < current.length; j++) {
+                for (j = operand1 + 1; j <= current.length; j++) {
                     num2 += (current[j])
                     console.log(num2)
-                    var addition = (parseInt(num1) + parseInt(num2))
-                    console.log(addition)
-                    newScreen.innerHTML += ' = ' + addition
-                    current = []
-                    console.log(current)
                 }
+                var addition = (parseInt(num1) + parseInt(num2))
+                console.log(addition)
+                newScreen.innerHTML += ' = ' + addition
+                current = []
+                console.log(current)
             } else if (current[operand2] === '-') {
                 for (i = 0; i < operand2; i++) {
                     num1 += (current[i])
@@ -38,12 +38,12 @@ for (i = 0; i < buttons.length; i++) {
                 for (j = operand2 + 1; j < current.length; j++) {
                     num2 += (current[j])
                     console.log(num2)
-                    var subtract = (parseInt(num1) - parseInt(num2))
-                    console.log(subtract)
-                    newScreen.innerHTML += ' = ' + subtract
-                    current = []
-                    console.log(current)
                 }
+                var subtract = (parseInt(num1) - parseInt(num2))
+                console.log(subtract)
+                newScreen.innerHTML += ' = ' + subtract
+                current = []
+                console.log(current)
             } else if (current[operand3] === 'x') {
                 for (i = 0; i < operand3; i++) {
                     num1 += (current[i])
@@ -52,27 +52,26 @@ for (i = 0; i < buttons.length; i++) {
                 for (j = operand3 + 1; j < current.length; j++) {
                     num2 += (current[j])
                     console.log(num2)
-                    var multiply = (parseInt(num1) * parseInt(num2))
-                    console.log(multiply)
-                    newScreen.innerHTML += ' = ' + multiply
-                    current = []
-                    console.log(current)
                 }
+                var multiply = (parseInt(num1) * parseInt(num2))
+                console.log(multiply)
+                newScreen.innerHTML += ' = ' + multiply
+                current = []
+                console.log(current)
             } else {
                 for (i = 0; i < operand4; i++) {
                     num1 += (current[i])
                     console.log(num1)
-
                 }
                 for (j = operand4 + 1; j < current.length; j++) {
                     num2 += (current[j])
                     console.log(num2)
-                    var divide = (parseInt(num1) / parseInt(num2))
-                    console.log(divide)
-                    newScreen.innerHTML += ' = ' + divide
-                    current = []
-                    console.log(current)
                 }
+                var divide = (parseInt(num1) / parseInt(num2))
+                console.log(divide)
+                newScreen.innerHTML += ' = ' + divide
+                current = []
+                console.log(current)
             }
         } else if ($target === 'C') {
             current = []
@@ -86,6 +85,7 @@ for (i = 0; i < buttons.length; i++) {
             current.push($target)
             console.log(current)
             newScreen.innerHTML += $target
+
         }
     })
 }
